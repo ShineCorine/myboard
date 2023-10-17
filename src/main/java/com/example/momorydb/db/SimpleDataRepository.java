@@ -27,7 +27,7 @@ abstract public class SimpleDataRepository<T extends Entity, ID extends Long> im
         }
 
         // db에 데이터가 있는지 확인
-        var prevData = dataList.stream()
+         var prevData = dataList.stream()
                 .filter(it -> {
                     return it.getId().equals(data.getId());
                 })
@@ -67,7 +67,7 @@ abstract public class SimpleDataRepository<T extends Entity, ID extends Long> im
                 })
                 .findFirst();
         if(deleteEntity.isPresent()){
-            dataList.remove(deleteEntity);
+            dataList.remove(deleteEntity.get());
         }
 
     }
