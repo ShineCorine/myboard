@@ -45,15 +45,12 @@ public class UserApiController {
         var response = userService.findById(id);
         return response.get();
     }
-//
-//    @GetMapping("/join")
-//    public String join(){
-//        return "join";
-//    }
 
+    @GetMapping("/score")
+    public List<UserEntity> filterScore(
+            @RequestParam int score
+    ){
+        return userService.filterScore(score);
+    }
 
-//    @DeleteMapping("/{id}")
-//    public void delete(){
-//        userService.
-//    }
 }

@@ -22,11 +22,6 @@ public class UserService {
         return userRepository.save(user);
     }
 
-//    public UserEntity create(UserEntity user){
-//
-//        // save를 위해 repository 필요
-//
-//    }
 
     public List<UserEntity> findAll(){
         return userRepository.findAll();
@@ -38,6 +33,10 @@ public class UserService {
 
     public Optional<UserEntity> findById(Long id){
         return userRepository.findById(id);
+    }
+
+    public List<UserEntity> filterScore(int score){
+        return userRepository.findAllScoreGreaterThan(score);
     }
 
 

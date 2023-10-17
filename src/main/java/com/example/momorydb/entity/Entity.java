@@ -10,4 +10,5 @@ public abstract class Entity implements PrimaryKey{
     @Setter
     private Long id;
 
+
 }

@@ -8,7 +8,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 // 데이터베이스에 저장하기 위해 이름을 UserEntity로 명명.
 public class UserEntity extends Entity {
 
