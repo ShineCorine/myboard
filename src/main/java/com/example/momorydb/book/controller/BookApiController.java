@@ -34,4 +34,16 @@ public class BookApiController {
         bookService.delete(id);
     }
 
+
+    @GetMapping("/id/{id}")
+    public BookEntity findById(
+            @PathVariable Long id
+    ){
+        return bookService.find(id).get();
+
+    }
+
+//    @GetMapping("/find")
+//    public BookEntity findByName(
+//    )
 }

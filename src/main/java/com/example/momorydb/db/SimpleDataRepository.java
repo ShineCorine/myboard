@@ -1,5 +1,4 @@
 package com.example.momorydb.db;
-
 import com.example.momorydb.entity.Entity;
 
 import javax.swing.text.html.Option;
@@ -69,9 +68,5 @@ abstract public class SimpleDataRepository<T extends Entity, ID extends Long> im
         if(deleteEntity.isPresent()){
             dataList.remove(deleteEntity.get());
         }
-
     }
-
-
-
 }

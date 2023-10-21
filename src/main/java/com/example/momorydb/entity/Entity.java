@@ -1,14 +1,11 @@
 package com.example.momorydb.entity;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 public abstract class Entity implements PrimaryKey{
 
-    @Getter
     @Setter
     private Long id;
-
-
 }

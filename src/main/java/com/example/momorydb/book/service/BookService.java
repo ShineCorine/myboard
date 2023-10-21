@@ -2,11 +2,10 @@ package com.example.momorydb.book.service;
 
 import com.example.momorydb.book.db.BookRepository;
 import com.example.momorydb.book.entity.BookEntity;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookService {
@@ -37,27 +36,8 @@ public class BookService {
     }
 
     // find one
-
-
-
+    public Optional<BookEntity> find(Long id){
+        return bookRepository.findById(id);
+    }
 
 }
-
-
-
-// 위의 코드와 동일하다. 롬복에서 제공한다.
-
-//@Service
-//@RequiredArgsConstructor
-//public class BookService {
-//    private final BookRepository bookRepository;
-//}
-
-
-//@Service
-//@RequiredArgsConstructor
-//public class BookService {
-//
-//    @Autowired
-//    private  BookRepository bookRepository;
-//}
