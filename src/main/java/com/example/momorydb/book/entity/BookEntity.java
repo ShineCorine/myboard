@@ -1,19 +1,25 @@
 package com.example.momorydb.book.entity;
 
-import com.example.momorydb.entity.Entity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@EqualsAndHashCode(callSuper = true)
+import java.math.BigDecimal;
+
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class BookEntity extends Entity {
-    private String title;
-    private String isbn;
-    private String author;
-    private int price;
+@Entity(name = "book")
+public class BookEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String category;
+    private BigDecimal amount;
 }

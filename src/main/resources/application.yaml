@@ -9,6 +9,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/book_store
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: sjm
-    password: ${MYSQL_PASSWORD}
+#    username: sjm
+#    password: ${MYSQL_PASSWORD}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 

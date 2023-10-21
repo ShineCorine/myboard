@@ -33,7 +33,7 @@ public class UserApiController {
     public void delete(
             @PathVariable Long id
     ){
-        userService.deleteById(id);
+//        userService.deleteById(id);
     }
 
     @GetMapping("/id/{id}")

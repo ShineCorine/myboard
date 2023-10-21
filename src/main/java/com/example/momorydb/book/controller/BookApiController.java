@@ -31,7 +31,7 @@ public class BookApiController {
     public void delete(
             @PathVariable Long id
     ){
-        bookService.delete(id);
+//        bookService.delete(id);
     }
 
 
